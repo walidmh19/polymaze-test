@@ -1,0 +1,8 @@
+.logoContainer{
+   height: 300vh;
+}
+
+.logoContainer img{
+   position: fixed;
+   top: 0;
+}

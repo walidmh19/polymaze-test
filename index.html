@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>polymaze registration</title>
+   <style>
+      *{
+         padding: 1rem;
+         font-size: 1.4rem;
+      }
+   </style>
+   <link rel="stylesheet" href="./style.css">
+   <script src="./script.js" defer></script>
+</head>
+<body>
+
+   <div class="logoContainer">
+      <img id="animatedLogo" src="./logo animation/00055.png" alt="">
+   </div>
+<!-- 
+   <form action="https://sheetdb.io/api/v1/f8z3qnorfryjy" method="post">
+      <input type="text" placeholder="enter your first name" name="data[first name]"><br>
+      <input type="text" placeholder="enter your last name" name="data[last name]"><br>
+      <input type="email" placeholder="enter your email" name="data[email]"><br>
+      <input type="text" placeholder="enter your team name" name="data[team name]"><br>
+      <input type="tel" placeholder="enter your phone number" name="data[phone]"><br>
+      <select name="data[team members]" id="">
+         <option value="1" selected>1</option>
+         <option value="2">2</option>
+         <option value="3">3</option>
+         <option value="4">4</option>
+      </select>
+      <button type="submit">register</button>
+   </form>
+ -->
+
+ 
+ <form action="https://script.google.com/macros/s/AKfycbxOne5Tn62ZxguRktHxz7q-YrgMA3G_4HiGtZnksIBaQHOw62d1mfpfK3fmU84frCziYA/exec" method="post">
+   <input type="text" placeholder="enter your first name" name="first name"><br>
+   <input type="text" placeholder="enter your last name" name="last name"><br>
+   <input type="email" placeholder="enter your email" name="email"><br>
+   <input type="text" placeholder="enter your team name" name="team name"><br>
+   <input type="tel" placeholder="enter your phone number" name="phone"><br>
+   <select name="team members" id="">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+   </select>
+   <button type="submit">register</button>
+</form>
+
+
+</body>
+
+<script>
+   let form = document.querySelector('form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(form),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            
+            window.open('page.html', '_blank');
+
+          }).catch(err =>{
+            window.open('page.html', '_blank')
+          })
+        });
+</script>
+</html>
