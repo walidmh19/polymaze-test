@@ -174,7 +174,11 @@ form.addEventListener("submit", e => {
       teamMembers:members
 
       }
-      sendEmail(msgObj)
+
+      let msg = `Hi <strong>${msgObj.email}</strong> aka <strong>${msgObj.name}</strong>, You are receiving this email because you registered in polymaze as <strong>${msgObj.teamName}</strong>
+
+      with <strong>${msgObj.teamMembersCount}</strong> other members : <strong></strong>`
+      sendEmail(msg)
       window.open('../page.html', '_blank');
 
    }).catch(err => {
@@ -227,7 +231,7 @@ function sendEmail(obj ){
 
       Subject : "Successfully registrated",
       TemplateName: "C",
-      Body : JSON.stringify(obj)
+      Body : obj
   }).then(
     message => alert(message)
   );
