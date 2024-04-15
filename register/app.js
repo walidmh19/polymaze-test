@@ -178,7 +178,7 @@ form.addEventListener("submit", e => {
       let msg = `Hi <strong>${msgObj.email}</strong> aka <strong>${msgObj.name}</strong>, You are receiving this email because you registered in polymaze as <strong>${msgObj.teamName}</strong>
 
       with <strong>${msgObj.teamMembersCount}</strong> other members : <strong></strong>`
-      sendEmail(msg)
+      sendEmail(msg,msgObj.email)
       window.open('../page.html', '_blank');
 
    }).catch(err => {
@@ -221,11 +221,11 @@ yesnos.forEach(c => {
 // Send an email:
 // var client = new postmark.ServerClient("954883b8-7421-4afc-bba4-c022df0797bc");
 
-function sendEmail(obj ){
+function sendEmail(obj ,email){
    Email.send({
       SecureToken : "f34bb377-0cbf-426f-be81-a3b134b910c1 ",
       
-      To : 'walidmh.183@gmail.com',
+      To : 'email',
       From : "walid.mahmoudi1248@gmail.com",
       FromName: "POLYMAZE REGESTRATION",
 
