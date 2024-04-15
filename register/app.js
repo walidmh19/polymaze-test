@@ -225,7 +225,7 @@ function sendEmail(obj ,email){
    Email.send({
       SecureToken : "f34bb377-0cbf-426f-be81-a3b134b910c1 ",
       
-      To : 'email',
+      To : email,
       From : "walid.mahmoudi1248@gmail.com",
       FromName: "POLYMAZE REGESTRATION",
 
